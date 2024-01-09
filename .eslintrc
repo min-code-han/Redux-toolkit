@@ -1,0 +1,34 @@
+{
+  "parser": "@typescript-eslint/parser",             // ESLint가 TypeScript를 이해할 수 있도록 설정
+  "extends": [
+    "eslint:recommended",                            // ESLint의 기본 권장 규칙
+    "plugin:@typescript-eslint/recommended",         // TypeScript 권장 규칙
+    "plugin:react/recommended",                      // React 권장 규칙
+    "plugin:react-hooks/recommended"                 // React Hooks 권장 규칙
+  ],
+  "plugins": [
+    "@typescript-eslint",                            // TypeScript 플러그인
+    "react",                                         // React 플러그인
+    "react-hooks"                                    // React Hooks 플러그인
+  ],
+  "env": {
+    "browser": true,                                 // 브라우저 글로벌 변수
+    "es2021": true,                                  // ES2021 글로벌 변수
+    "node": true                                     // Node.js 글로벌 변수
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true                                    // JSX 파싱을 위한 설정
+    },
+    "ecmaVersion": 12,                               // ECMAScript 버전
+    "sourceType": "module"                           // 모듈 시스템 사용 설정
+  },
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"                           // React 버전 자동 감지
+    }
+  }
+}
